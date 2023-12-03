@@ -27,7 +27,7 @@ function announcement() {
             justifyContent: "center",
             color: "white",
             margin: 'auto',
-            fontFamily:'Archivo Narrow, sans-serif',
+            fontFamily:'Archivo Narrow',
             fontSize: '18px',
             marginTop: 'auto'
         }}
