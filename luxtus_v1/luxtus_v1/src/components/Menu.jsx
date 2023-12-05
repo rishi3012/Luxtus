@@ -12,6 +12,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import LuxtusLogo from '../components/assets/LuxtusLogo.JPG';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ShoppingBag from '@mui/icons-material/ShoppingBag';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const pages = ['All Sunglasses', 'Acetate Sunglasses', 'Metal Sunglasses'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -51,36 +54,32 @@ function ResponsiveAppBar() {
 
           <Typography
             variant="h6"
-            noWrap
             sx={{
-              flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
               color: 'white',
-              display: { xs: 'none', md: 'flex' },
+              marginRight: 2, // Adjust marginRight as needed
             }}
           >
             <img src={LuxtusLogo} alt="Luxtus Logo" width={200} />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ mx: 1, color: 'white', textTransform: 'capitalize' }}
+                sx={{ color: 'white', textTransform: 'capitalize' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ display: 'flex', flexGrow: 2, justifyContent: 'flex-end' }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: 'white' }}>
-                <Avatar alt="User Avatar" src="/static/images/avatar/2.jpg" />
-              </IconButton>
+              <AccountCircleIcon onClick={handleOpenUserMenu} sx={{ p: 0, color: 'white', width: '30px', height: '30px', ml: 6}}>    
+              </AccountCircleIcon>
             </Tooltip>
             <Menu
               id="menu-appbar"
@@ -95,7 +94,13 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
+            <ShoppingBag sx={{ 
+              width: '30px', 
+              height: '30px',
+              ml: 3,
+              }}/>
           </Box>
+
         </Toolbar>
         <Menu
           id="menu-appbar"
