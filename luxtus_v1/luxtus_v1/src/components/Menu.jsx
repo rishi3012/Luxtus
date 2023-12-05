@@ -95,8 +95,8 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
             <ShoppingBag sx={{ 
-              width: '30px', 
-              height: '30px',
+              width: '25px', 
+              height: '25px',
               ml: 3,
               }}/>
           </Box>
