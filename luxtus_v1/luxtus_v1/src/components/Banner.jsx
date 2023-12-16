@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-function Slideshow() {
+function Banner() {
     return (
         <Box
             sx={{
@@ -11,7 +11,7 @@ function Slideshow() {
                 justifyContent: 'center',
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'grey',
+                backgroundColor: 'red',
             }}
         >
 
@@ -19,4 +19,4 @@ function Slideshow() {
     );
 }
 
-export default Slideshow();
+export default Banner;
